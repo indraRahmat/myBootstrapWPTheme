@@ -216,5 +216,12 @@ h6, .h6 {
 .box{
   padding: 15px;
   border: #ccc 1px solid;
+}
 
+.blog-nav a{
+  color: #fff;
+}
+
+.blog-nav a:hover{
+  color: #666;
 }
