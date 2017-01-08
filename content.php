@@ -17,10 +17,18 @@
       <?php the_post_thumbnail(); ?>
     </div>
   <?php endif; ?>
+
+  <!--content -->
+
   <?php if(is_single()) : ?>
     <?php the_content(); ?>
   <?php else : ?>
     <?php the_excerpt(); ?>
+  <?php endif; ?>
+
+  <!--comments-->
+  <?php if(is_single()) : ?>
+    <?php comments_template(); ?>
   <?php endif; ?>
 
 </div>
