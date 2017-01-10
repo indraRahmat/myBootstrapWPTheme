@@ -9,7 +9,7 @@
   </h2>
   <p class="blog-post-meta">
   <?php the_time('F j, Y g:i a'); ?>
-    <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a>
+    by <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a>
   </p>
 
   <?php if(has_post_thumbnail()) : ?>
@@ -31,4 +31,4 @@
     <?php comments_template(); ?>
   <?php endif; ?>
 
-</div>
+</div><!-- /.blog-post -->
