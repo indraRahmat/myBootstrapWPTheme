@@ -8,6 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <meta name="description" content="<?php bloginfo('description'); ?>">
+  <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
   <!-- <title>Blog Template for Bootstrap</title> -->
   <title>
     <?php bloginfo('name'); ?> |
@@ -19,9 +21,6 @@
   <link href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" rel="stylesheet">
   <!-- <link href="css/style.css" rel="stylesheet"> -->
   <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
   <?php wp_head(); ?>
 </head>
@@ -47,9 +46,56 @@
       </nav>
     </div>
   </div>
+    <section class="showcase">
+      <div class="container">
+        <h1>Custom Bootstrap Wordpress Theme</h1>
+        <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam</p>
+        <a class="btn btn-primary btn-lg">Read More</a>
+      </div>
+    </section>
 
-  <div class="container">
-    <div class="blog-header">
-      <h1 class="blog-title"><?php bloginfo('name'); ?></h1>
-      <p class="lead blog-description"><?php bloginfo('description'); ?></p>
-    </div>
+    <section class="boxes">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="box">
+              <?php if(is_active_sidebar('box1')) : ?>
+                <?php dynamic_sidebar('box1'); ?>
+              <?php endif; ?>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="box">
+              <?php if(is_active_sidebar('box2')) : ?>
+                <?php dynamic_sidebar('box2'); ?>
+              <?php endif; ?>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="box">
+              <?php if(is_active_sidebar('box3')) : ?>
+                <?php dynamic_sidebar('box3'); ?>
+              <?php endif; ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<footer class="blog-footer">
+    <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name'); ?></p>
+    <p>
+      <a href="#">Back to top</a>
+    </p>
+</footer>
+
+<?php wp_footer(); ?>
+
+<!--js links  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="<?php bloginfo('template_url') ?>/js/bootstrap.js"></script>
+</body>
+</html>
